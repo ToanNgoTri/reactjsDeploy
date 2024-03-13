@@ -23,9 +23,9 @@ class App extends Component {
 }
 
 function App1 ({num}) {
-  const [number, setNum] =  useState(num)
+  const [number, setNum] =  useState(Number(num))
   return(
-    <div onClick={ ()=> setNum(number+1)}>
+    <div style={{cursor:'pointer'}} onClick={ ()=> setNum(number+100)}>
       Bấm vào đây {number}
     </div>
   )
