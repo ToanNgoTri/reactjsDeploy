@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { Component } from 'react';
+import { Component , useState} from 'react';
 
 class App extends Component {
   constructor(props){
@@ -22,4 +22,13 @@ class App extends Component {
   }
 }
 
-export default App;
+function App1 ({num}) {
+  const [number, setNum] =  useState(num)
+  return(
+    <div onClick={ ()=> setNum(number+1)}>
+      Bấm vào đây {number}
+    </div>
+  )
+}
+
+export {App1,App};
